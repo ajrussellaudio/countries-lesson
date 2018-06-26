@@ -8,7 +8,7 @@ class CountriesBox extends React.Component {
     this.state = {
       countries: [],
       selectedCountry: ""
-    }
+    };
     this.handleCountrySelect = this.handleCountrySelect.bind(this);
   }
 
@@ -17,7 +17,7 @@ class CountriesBox extends React.Component {
     const url = "https://restcountries.eu/rest/v2/all";
     fetch(url)
       .then(res => res.json())
-      .then(countries => this.setState({countries: countries}));
+      .then(countries => this.setState({ countries: countries }));
     // const request = new XMLHttpRequest();
     // request.open("GET", url);
     // request.addEventListener("load", () => {
@@ -31,7 +31,7 @@ class CountriesBox extends React.Component {
   handleCountrySelect(event) {
     const countryIndex = event.target.value;
     const country = this.state.countries[countryIndex];
-    this.setState({selectedCountry: country})
+    this.setState({ selectedCountry: country });
   }
 
   render() {
@@ -42,9 +42,9 @@ class CountriesBox extends React.Component {
           countries={this.state.countries}
           onSelect={this.handleCountrySelect}
         />
-        <CountryDetails country={this.state.selectedCountry}/>
+        <CountryDetails country={this.state.selectedCountry} />
       </div>
-    )
+    );
   }
 }
 

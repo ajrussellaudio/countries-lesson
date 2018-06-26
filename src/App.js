@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import CountriesBox from "./containers/CountriesBox"
+import React, { Component } from "react";
+import CountriesBox from "./containers/CountriesBox";
 
 class App extends Component {
   render() {
